@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/fafa.ico" title="파비콘">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+</head>
+<body>
+    <header>
+        <h1><a href="#top"><img src="images/logo1.png" alt="KeytreeLogo" id="sitelogo"></a></h1>
+        <nav>
+			<ul id="menu">
+				<li id="menu01"><a href="#top">Home</a></li>
+				<li id="menu02"><a href="#about_top">About</a></li>
+				<li id="menu03"><a href="#project">Project</a></li>
+				<li id="menu04"><a href="#work">Work</a></li>
+				<li id="menu05"><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+    </header>
+    <section id="top">
+        <video autoplay muted loop playsinline>
+            <source src="video/backck001.mp4" type="video/mp4" />
+            브라우저가 영상을 지원하지 않아요.
+        </video>
+        <div class="top-text">
+            <div class="fixed-line">I am</div><br>
+            <div class="typing-line">
+                <span id="dynamic"></span><span class="cursor">|</span>
+            </div>
+        </div>
+        <!--스크롤 액션 들어가는 요소, 삭제하지 마시오-->
+        <a href="#about" class="scroll-down">
+            <img src="images/Scrollme.svg" alt="스크롤 유도 아이콘" width="80">
+        </a>
+        
+    </section>
+    <section id="about_top">
+        <div id="two_1">
+            <h2>About</h2>
+            <br>
+            <span>
+                성장하는 잎과줄기<br>만개하라 꽃봉오리여
+            </span>
+        </div>
+        <div id="two_2">
+            <div>
+                <p>
+                끊임없이 탐구하며, 모험을 두려워하지 않으며<br>
+                초심을 잃지 않고 목표를 향해서 끝까지 전심전력으로<br>
+                성장해 나가는 웹 디자인& 프론트엔드 달인이 되겠습니다.
+                </p>
+                <a href="#about_bottom" class="scroll-down2">
+                    <img src="images/scrollme_white.svg" alt="스크롤 유도 아이콘" width="80">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="about_bottom">
+        <div id="about_left">
+            <div id="about_corner1">
+                <h3>KIM EUN YOUNG</h3>
+                <img src="images/myphoto1.svg" alt="myphoto1">
+            </div>
+            <div id="about_corner2">
+                <p>
+                부산여자대학 음악과 음악치료전공 졸업 
+                <br>방송통신대학교 일본학과 3학년 휴학중
+                <br>출신 : 대구광역시<br>MBTI : INFP<br>
+                사용가능언어 : 일본어(비지니스회화 가능) <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                / 중국어(간단회화 가능)
+                </p>
+            </div>
+            <div id="about_corner3">
+                <p>자세한 경력을<span> 보고 싶으시다면?</span></p>
+                <div>
+                    <button id="about_btn1">노션 이력서</button>
+                    <button id="about_btn2">PDF 이력서</button>
+                </div>
+            </div>
+        </div>
+        <div id="about_right">
+            <div class="skill-box">
+                <span class="skillname">Adobe2D<br>Graphic</span>
+                <progress class="skillbar" value="95" min="0" max="100"></progress>
+                <span class="grade"><img src="images/grade_ss.svg"></span>
+            </div>
+            <div class="skill-box">
+                <span class="skillname">Figma</span>
+                <progress class="skillbar" value="90" min="0" max="100"></progress>
+                <span class="grade"><img src="images/grade_s_plus.svg"></span>
+            </div>
+            <div class="skill-box">
+                <span class="skillname">Markup</span>
+                <progress class="skillbar" value="90" min="0" max="100"></progress>
+                <span class="grade"><img src="images/grade_s_plus.svg"></span>
+            </div>
+            <div class="skill-box">
+                <span class="skillname">Styling</span>
+                <progress class="skillbar" value="85" min="0" max="100"></progress>
+                <span class="grade"><img src="images/grade_s.svg"></span>
+            </div>
+            <div class="skill-box">
+                <span class="skillname">Javascript</span>
+                <progress class="skillbar" value="80" min="0" max="100"></progress>
+                <span class="grade"><img src="images/grade_a.svg"></span>
+            </div>
+            <div class="skill-box">
+                <span class="skillname">React</span>
+                <progress class="skillbar" value="70" min="0" max="100"></progress>
+                <span class="grade"><img src="images/grade_b.svg"></span>
+            </div>
+            <div class="skill-box">
+                <span class="skillname">Blander</span>
+                <progress class="skillbar" value="70" min="0" max="100"></progress>
+                <span class="grade"><img src="images/grade_b.svg"></span>
+            </div>
+        </div>   
+    </section>
+    <section id="about_last">
+        <h2>Features</h2>
+        <section id="feature_list">
+            <div class="feature_li">
+                <img src="images/ellipse_bg.svg" alt="icons">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Pauca fastidii divelli effugiendorum<br>hausta falli iudex potenti.psum</p>
+            </div>
+            <div class="feature_li">
+                <img src="images/ellipse_bg.svg" alt="icons">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Pauca fastidii divelli effugiendorum<br>hausta falli iudex potenti.psum</p>
+            </div>
+            <div class="feature_li">
+                <img src="images/ellipse_bg.svg" alt="icons">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Pauca fastidii divelli effugiendorum<br>hausta falli iudex potenti.psum</p>
+            </div>
+            <div class="feature_li">
+                <img src="images/ellipse_bg.svg" alt="icons">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Pauca fastidii divelli effugiendorum<br>hausta falli iudex potenti.psum</p>
+            </div>
+        </section>
+        <!--스크롤 액션 들어가는 요소, 삭제하지 마시오-->
+        <a href="#project" class="scroll-down3">
+            <img src="images/Scrollme.svg" alt="스크롤 유도 아이콘">
+        </a>
+    </section>
+    <section id="project"><!--여기가 세번째 섹션--></section>
+    <section id="work"><!--여기가 네번째 섹션--></section>
+    <section id="contact"><!--여기가 마지막 섹션--></section>
+    <footer>
+        <div class="footer-left">
+            <!--강제 Flex적용을 위한 일부러 비어있는  div생성처리-->
+        </div>
+        <div class="footer-center">&copy; copyright Kim eun young All right reserved</div>
+        <div class="footer-right">
+            <audio controls>
+            <source src="#" type="audio/mpeg">
+            브라우저가 오디오 태그를 지원하지 않습니다.
+            </audio>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
