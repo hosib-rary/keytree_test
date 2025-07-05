@@ -167,7 +167,7 @@ header.scrolled2{
 
 /*각 파트별 정리*/
 
-#project,#work,#contact{
+#work,#contact{
     width: 100%; height: 1100px; border: 1px solid red;
 }
 
@@ -480,7 +480,6 @@ header.scrolled2{
   background-color: #EBF2F1;
   width: 100%;
   height: 770px;
-  border: 1px solid rgb(0, 255, 13);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -498,7 +497,6 @@ header.scrolled2{
   align-items: center;
   flex-direction: row;
   padding: 10px;
-  border: 1px soild red;
   text-align: center;
   gap: 20px;
 }
@@ -559,6 +557,88 @@ header.scrolled2{
   animation: pulse2 2s ease-in-out infinite;
   opacity: 0.9;
 }
+
+/*************Project**************/
+
+#project{
+  width: 100%;
+  height: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin: auto;
+  text-align: center;
+  background-image: url('../images/backck003.svg');
+}
+
+#project h2{
+  color: #054d3f;
+}
+
+#project span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #117C68;
+}
+
+#project_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#project_center div{
+  display: flex; justify-content: center; align-items: center;
+  text-align: center; gap: 10px;
+}
+
+#project_center div h4{
+  border: 1px solid #777;
+  color: #777;
+  border-radius: 60px;
+  width: fit-content;
+  padding: 3px 10px;
+  height: 30px;
+  text-align: center;
+}
+
+#project p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #727272;
+  line-height: 1.6;
+}
+
+#project #project_btn{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  flex-direction: row;
+}
+
+#project_btn button{
+  padding: 5px 20px;
+  color: white;
+  background-color: #4fc7b0;
+  width: 220px;
+  height: 30px;
+  border-radius: 60px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#project_btn button:hover{
+  font-weight: 600;
+}
+
+
+
 
 /*footer*/
 
