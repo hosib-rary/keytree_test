@@ -167,7 +167,7 @@ header.scrolled2{
 
 /*각 파트별 정리*/
 
-#work,#contact{
+#contact{
     width: 100%; height: 1100px; border: 1px solid red;
 }
 
@@ -278,6 +278,7 @@ header.scrolled2{
   display: inline-block;
   margin-bottom: 30px;
   border-bottom: 5px solid #FFF700;
+  font-size: 1.5em;
 }
 
 #about_top span {
@@ -488,6 +489,7 @@ header.scrolled2{
 }
 
 #about_last h2{
+  font-size: 1.5em;
   color: #117C68;
 }
 
@@ -561,6 +563,7 @@ header.scrolled2{
 /*************Project**************/
 
 #project{
+  border: 1px solid red;
   width: 100%;
   height: 1100px;
   display: flex;
@@ -571,19 +574,41 @@ header.scrolled2{
   margin: auto;
   text-align: center;
   background-image: url('../images/backck003.svg');
+  padding: 120px;
 }
 
-#project h2{
+#project #project_layout{
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%; /* 3페이지니까 전체 너비를 3배로 */
+}
+
+#project_layout > div {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+#projectpage01,#projectpage02,#projectpage03{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+
+#project_h2{
+  font-size: 1.5em;
   color: #054d3f;
 }
 
-#project span {
-  font-size: 18px;
-  font-weight: 600;
-  color: #117C68;
-}
-
-#project_center{
+.project_center{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -591,12 +616,25 @@ header.scrolled2{
   gap: 40px;
 }
 
-#project_center div{
+.project_center .hashtag_h4{
+  display: flex; justify-content: center; align-items: center;
+  flex-direction: row;
+}
+
+
+
+.project_center div .sitename {
+  font-size: 18px;
+  font-weight: 600;
+  color: #117C68;
+}
+
+.project_center div{
   display: flex; justify-content: center; align-items: center;
   text-align: center; gap: 10px;
 }
 
-#project_center div h4{
+.project_center .h4{
   border: 1px solid #777;
   color: #777;
   border-radius: 60px;
@@ -636,6 +674,150 @@ header.scrolled2{
 #project_btn button:hover{
   font-weight: 600;
 }
+
+
+/****프로젝트 구간 페이지네이션 ***/
+
+#pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.page-btn {
+  background-color: #eee;
+  border: none;
+  padding: 8px 16px;
+  margin: 0 5px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.page-btn:hover {
+  background-color: #ccc;
+}
+
+.page-btn.active {
+  background-color: #4cd5bb;
+  color: white;
+}
+
+/* Work 영역 전체 */
+#work {
+  width: 100%;
+  padding: 100px 0;
+  background: url('../images/gallery_background.svg') no-repeat center / cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#work h2 {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+  color: #1b722c;
+}
+
+
+/* 필터 메뉴 */
+#work-filter {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  list-style: none;
+  padding: 0;
+}
+
+#work-filter li {
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid #4CD5BB;
+  transition: 0.3s;
+}
+
+#work-filter li.active {
+  background-color: #4CD5BB;
+}
+
+#work-filter li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+/* Work Layout 전체 */
+#work_layout > div {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+/* 활성화된 Work 콘텐츠 */
+#work_layout > .active_work {
+  display: block;
+}
+
+/* Work Group */
+.work_group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+/* 그룹별 페이지 (group1, group2, group3) */
+.group1, .group2, .group3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  width: 100%;
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 20px 0;
+  justify-items: center;
+}
+
+.gallery-item {
+  width: 250px;
+  height: 250px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+}
+
+/* pagination 스타일 */
+.w_pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.pagination-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-dot.active {
+  background-color: #4CD5BB;
+}
+
+
+
+
 
 
 
@@ -860,6 +1042,12 @@ footer {
   }
 
 
+  /***Work 미디어쿼리 적용 **/
+
+  .group1, .group2, .group3 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px;
+  }
 
   .footer-right {
     display: none;
@@ -1077,6 +1265,21 @@ footer {
     text-align: right !important;
   }
 
+  /***Work 미디어쿼리 적용 **/
+
+  .group1, .group2, .group3 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+  }
+  .gallery-item {
+    max-width: 140px;
+    height: 120px;
+  }
+
+
+
+
+
   .footer-right {
     display: none;
   }
@@ -1279,6 +1482,21 @@ footer {
     left: initial !important;
     left: 20px;
   }
+
+
+  /***Work 미디어쿼리 적용 **/
+
+  .group1, .group2, .group3 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+  }
+  .gallery-item {
+    max-width: 140px;
+    height: 120px;
+  }
+
+
+
 
 
   .footer-right {
