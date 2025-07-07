@@ -61,7 +61,7 @@ const sections = document.querySelectorAll('section');
 const menuLinks = document.querySelectorAll('#menu a, #menu05 a');
 
 window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY + 150;
+  const scrollY = window.scrollY + 100;
   let current = '';
 
   sections.forEach(section => {
@@ -80,30 +80,36 @@ window.addEventListener('scroll', () => {
       link.classList.add('active');
     }
   });
+
+
+//Project  
+const projectLayout = document.getElementById('project_layout');
+const pageBtns = document.querySelectorAll('.page-btn');
+
+pageBtns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    // 슬라이드 이동
+    projectLayout.style.transform = `translateX(-${index * 100}%)`;
+
+    // active 클래스 처리
+    pageBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
 });
 
-/*
-//이건 lagacy code입니다. 
-const menuLinks = document.querySelectorAll('#menu a');
-const sections = [...menuLinks].map(link => document.querySelector(link.getAttribute('href')));
+  // 기본 첫 번째 버튼 활성화
+  if (pageBtns[0]) pageBtns[0].classList.add('active');
 
-window.addEventListener('scroll', () => {
-  let currentIndex = -1;
-  const scrollY = window.scrollY + 150;
+  //Work패널 ul 메뉴 인터렉션
 
-  sections.forEach((section, i) => {
-    if (section && section.offsetTop <= scrollY) {
-      currentIndex = i;
-    }
+  const tabs = document.querySelectorAll('#work ul li');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
   });
 
-  menuLinks.forEach((link, i) => {
-    if (i === currentIndex && link.id !== 'menu05') {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  }); 
-  
+
 });
-*/
