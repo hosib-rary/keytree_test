@@ -70,7 +70,7 @@ header h1 img {
 
 #menu li a.active {
   font-weight: bold;
-  border-bottom: 2px solid #1b722c !important;
+  border-bottom: 2px solid #1b722c;
 }
 
 #menu li a:hover {
@@ -78,7 +78,7 @@ header h1 img {
 }
 
 #menu li a:hover.active {
-  border-bottom: 2px solid #1b722c !important;
+  border-bottom: 2px solid #1b722c;
 }
 
 
@@ -140,8 +140,8 @@ header h1 img {
 
 /* Contact 메뉴는 제외 (선명하게 처리) */
 #menu05 a::after {
-    display: none !important;
-    content: none !important;
+    display: none;
+    content: none;
 }
 
 
@@ -325,6 +325,11 @@ header.scrolled2{
   100% { transform: scale(1); opacity: 0.6; }
 }
 
+
+
+/***about_bottom ****/
+
+
 #about_bottom{
   margin: auto;
   width: 100vw;
@@ -337,28 +342,36 @@ header.scrolled2{
   padding: 20px;
 }
 
-#about_right{
-  height: 80vh;
+#about_left{
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content:space-around;
+  flex-direction: column;
+  padding: 20px;
 }
 
-#about_bottom  #about_left{
+#about_right{
   width: 50%;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  height: 100%;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
   flex-direction: column;
-  padding: 150px;
+  gap: 50px;
+  padding: 20px;
 }
 
 #about_corner1 h3{
   font-weight: 800;
   color: #117C68;
-  margin-bottom: 30px;
+  padding: 30px 0;
   font-size: 1.4rem;
 }
 
 #about_corner1 img {
-  width: 40%;
+  width: 35%;
 }
 
 #about_corner2 p{
@@ -367,7 +380,7 @@ header.scrolled2{
 }
 
 #about_corner3{
-  margin:100px 0 0 0;
+  width: 100%;
   padding: 10px 0;
   display: flex;
   justify-content: center;
@@ -375,30 +388,34 @@ header.scrolled2{
 }
 
 #about_corner3>div{
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  padding: 10px;
+  justify-content: center;
   text-align: center;
+  gap: 10px;
 }
 
-#about_corner3>div>#about_btn1{
-  font-size: 1.3rem;
+button#about_btn1{
+  border: none;
+  display: block;
+  font-size: 1.1rem;
   border-radius: 40px;
-  width: 220px;
-  height: 60px;
+  width: 270px;
+  height: 45px;
   background-color: #00A888;
   color: white;
-  border: none; margin-right: 10px;
 }
 
-#about_corner3>div>#about_btn2{
-  font-size: 1.3rem;
+button#about_btn2{
+  border: none;
+  display: block;
+  font-size: 1.1rem;
   border-radius: 40px;
-  width: 220px;
-  height: 60px;
+  width: 270px;
+  height: 45px;
   background-color: #53EFD1;
   color: #117C68;
-  border: none;
 }
 
 #about_btn1:hover, #about_btn2:hover{
@@ -417,16 +434,6 @@ header.scrolled2{
   font-weight: 800;
 }
 
-#about_bottom > #about_right{
-  width: 50%;
-  margin-top: 100px;
-  height: fit-content;
-  display: flex; 
-  justify-content: center; 
-  align-items: center;
-  flex-direction: column;
-  gap: 50px;
-}
 
 .skill-box {
   display: flex;
@@ -493,17 +500,14 @@ header.scrolled2{
   color: #117C68;
 }
 
-#feature_list{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-  padding: 10px;
-  text-align: center;
-  gap: 20px;
+section#feature_list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
 }
 
-.feature_li{
+div.feature_li{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -518,15 +522,16 @@ header.scrolled2{
   height: 450px;
 }
 
-.feature_li:hover{
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+div.feature_li:hover{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, 
+  rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
-.feature_li h3:hover{
+div.feature_li h3:hover{
   color: #117C68;
 }
 
-.feature_li img{
+div.feature_li img{
   border-radius: 100%;
   width: 150px;
   height: 150px;
@@ -535,14 +540,14 @@ header.scrolled2{
   text-align: center;
 }
 
-.feature_li h3{
+div.feature_li h3{
   font-size: 32px;
   font-weight: 700;
   color: #444444;
   text-align: center;
 }
 
-.feature_li p{
+div.feature_li p{
   font-size: 14px;
   color: #666;
   line-height: 1.6;
@@ -563,7 +568,6 @@ header.scrolled2{
 /*************Project**************/
 
 #project{
-  border: 1px solid red;
   width: 100%;
   height: 1100px;
   display: flex;
@@ -651,23 +655,27 @@ header.scrolled2{
   line-height: 1.6;
 }
 
-#project #project_btn{
-  display: flex;
+div#project_btn{
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  gap: 5px;
+  gap: 15px;
+  height: fit-content;
   align-items: center;
   flex-direction: row;
 }
 
 #project_btn button{
-  padding: 5px 20px;
+  box-sizing: border-box;
+  padding: 5px 10px;
   color: white;
   background-color: #4fc7b0;
-  width: 220px;
-  height: 30px;
+  width:clamp(10vw,15vw,20vw);
+  height: 40px;
   border-radius: 60px;
   border: none;
-  font-size: 16px;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
@@ -779,19 +787,21 @@ header.scrolled2{
 .group1, .group2, .group3 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-gap: 5px;
   width: 100%;
   flex: 0 0 100%;
   box-sizing: border-box;
-  padding: 20px 0;
+  padding: 10px 0;
   justify-items: center;
+  align-items: center;
 }
 
-.gallery-item {
-  width: 250px;
-  height: 250px;
+div.gallery-item {
+  border: 1px solid red;
+  width: 20vw;
+  height: 20vh;
   background-color: #f2f2f2;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 }
 
 /* pagination 스타일 */
@@ -966,7 +976,6 @@ footer {
   }
 
   #about_top #two_2 p{
-    
     font-size: 1.2rem;
     line-height: 2;
     font-weight: 500;
@@ -977,31 +986,33 @@ footer {
     width: 60px;
   }
 
+  /************About bottom****************/
+
   #about_bottom {
+    width: 100%;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: initial;
-    padding: 20px;
+    padding: 20px 0;
     height: max-content;
   }
 
-  #about_left, #about_right {
+  div#about_left, div#about_right {
+    padding: 20px;
+    box-sizing:border-box;
+    width: calc( 100% - 100px );
     text-align: center;
-    width: 90% !important;
-    height: initial !important;
+    height: initial;
     flex: 1;
-    gap: initial !important;
-    gap: 10px !important;
+    margin: 0 auto;
   }
 
   #about_left{
-    width: initial !important;
-    width: 85% !important;
-    padding: initial !important;
-    padding: 30px 0;
+    box-sizing:border-box;
+    padding: 45px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
   }
@@ -1016,39 +1027,131 @@ footer {
     margin:20px 0;
   }
 
-  #about_right{
-    width: initial !important;
-    margin-top: 0 !important;
-    padding: 30px 0;
-    width: 90%;
-    height: 30%;
-    margin: auto;
-    
-  }
 
   #about_left #about_corner3{
     margin-top: 100px;
     margin: auto;
   }
 
+  #about_corner3 div{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    gap: 10px;
+  }
+
+  button#about_btn1,button#about_btn2{
+    border: none;
+    display: block;
+    font-size: 1.1rem;
+    border-radius: 40px;
+    width: 45%;
+    margin-right: none;
+    margin: 0 auto;
+  }
+
+  span.skillname{
+    text-align: left;
+    width: 14%;
+    font-size: clamp(14px, 2vw, 20px);
+  }
+
+
   .skill-box{
-    width: initial !important;
-    width: 80vw !important;
+    width: initial;
+    width: 95%;
     margin-bottom:10px;
   }
 
   .skill-bar {
-    width: initial !important;
+    text-align: center;
+    width: initial;
+    margin: 0 auto;
+  }
+
+
+  /*****About bottom(feature)*****/
+
+  #about_last {
+    flex-direction: column;
+    height: auto;
+    padding: 60px 20px;
+    gap: 30px;
+    text-align: center;
+  }
+
+  section#feature_list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .feature_li {
+    width: 280px;
+    height: 420px;
+    padding: 30px;
+  }
+
+  /* #project 미디어쿼리 */
+  #project {
+    padding: 80px 30px;
+    gap: 40px;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+  }
+
+  #project_layout {
+    flex-direction: row;
+    width: 300%;
+  }
+
+  #project_layout > div {
+    padding: 0 20px;
+  }
+
+  .project_center .sitename {
+    font-size: 1rem;
+  }
+
+  .project_center div {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  div#project_btn{
+    grid-template-columns: repeat(1, 1fr); /* 세로 정렬되도록 1줄 1칸으로 변경 */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #project_btn button{
+    border: 1px solid red;
+    width:clamp(33vw,44vw,55vw);
   }
 
 
   /***Work 미디어쿼리 적용 **/
 
   .group1, .group2, .group3 {
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
   }
 
+  div.gallery-item {
+    border: 1px solid red;
+    width: 30vw;
+    height: 30vh;
+    background-color: #f2f2f2;
+    /* border: 1px solid #ccc; */
+  } 
+
+
+  /*footer*/
   .footer-right {
     display: none;
   }
@@ -1070,17 +1173,18 @@ footer {
   #menu {
     width: 100%;
     justify-content: center;
-    gap: 10px;
+    gap: 10px !important;
     justify-content:center;
     align-items: center;
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap;
+    padding: 10px 20px; 
   }
 
   #menu li {
     display: flex;
     align-items: center; /* 글씨가 가운데 정렬되게! */
     justify-content: center;
-    height: 40px; /* 높이를 일정하게 */
+    height: 35px; /* 높이를 일정하게 */
   }
 
   #menu a {
@@ -1089,7 +1193,7 @@ footer {
     justify-content: center;
     height: 100%;
     padding: 0 12px;
-    font-size: 14px;
+    font-size: 0.8rem !important;
     text-align: center;
   }
 
@@ -1213,72 +1317,182 @@ footer {
   }
 
   #about_right{
-    width: initial !important;
-    margin-top: 0 !important;
-    padding: 30px 0;
-    width: 90%;
-    height: 30%;
+    width: 100%;
+    padding: 20px;
     margin: auto;
-    gap: initial !important;
-    gap: 10px  !important;
-    
+    gap: 50px;
   }
 
-  #about_left #about_corner3{
-    width: initial !important;
-    margin-top: initial !important;
-    margin: 0 !important;
+  #about_left #about_corner3 {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
   }
 
-  #about_btn1,#about_btn2{
-    width: 170px !important;
-    height: 45px !important;
-    padding: 0px 20px !important;
-    text-align: center !important;
-    font-size: 1rem !important;
-    height: 50px;
-  } 
+  #about_corner3 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0 auto;
+}
 
-  .skill-box{
-    flex: 0.6;
-    margin: auto !important;
-    width: initial !important;
-    width: 70vw !important;
-    gap: initial !important;
-    margin-bottom:10px;
+  button#about_btn1,button#about_btn2{
+    border: none;
+    display: block;
+    font-size: 1.1rem;
+    border-radius: 40px;
+    width: 45%;
+    margin-right: none;
+    margin: 0 auto;
   }
 
   span.skillname{
-    width: 90px;
+    width: 15%;
     text-align: left;
-    transform: translateX(-20px);
+    font-size: clamp(11px, 2vw, 16px);
+  }
+
+
+  .skill-box{
+    display: flex;
+    justify-content: space-between;
+    margin:0 auto;
+    gap: 5%;
+    width: 100%;
   }
   
 
   .skillbar {
-    width: initial !important;
-    width: 200px !important;
+    margin: auto;
+    width: calc( 100% - 50% );
+    height: 1.1rem;
+    appearance: none;
   }
 
-  .grade img{
-    transform: translateX(20px);
-    text-align: right !important;
+  span.grade {
+    width: 15%;
+    text-align: right;
   }
 
-  /***Work 미디어쿼리 적용 **/
+   /* #about_last(feature) */
+  #about_last {
+    border: 1px solid red;
+    flex-direction: column;
+    height: auto;
+    padding: 60px;
+    gap: 60px;
+    text-align: center;
+  }
+
+  section#feature_list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  div.feature_li {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .feature_li p {
+    color: #757575;
+  }
+
+  /* #project */
+  #project {
+    padding: 60px 20px;
+    height: auto;
+    flex-direction: column;
+    gap: 40px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  #project_layout {
+    flex-direction: row;
+    width: 300%;
+  }
+
+  #project_layout > div {
+    padding: 0 15px;
+  }
+
+  .project_center .sitename {
+    font-size: 0.95rem;
+  }
+
+  .project_center div {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .project_center img {
+    width: 50%;
+  }
+  #project p {
+    font-size: 12px;
+  }
+
+  div#project_btn{
+    grid-template-columns: repeat(1, 1fr); /* 세로 정렬되도록 1줄 1칸으로 변경 */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #project_btn button{
+    width:clamp(33vw,44vw,55vw);
+  }
+
+
+   /***Work 미디어쿼리 적용 **/
+
+    #work-filter {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    list-style: none;
+    padding: 0;
+  }
+
+  #work-filter li {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #4CD5BB;
+    transition: 0.3s;
+  }
+
+  #work-filter li.active {
+    background-color: #4CD5BB;
+  }
+
+  #work-filter li a {
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .work_group{
+    border: 1px solid red;
+    width: 100% !important;
+  }
 
   .group1, .group2, .group3 {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 12px;
+    grid-gap: 10px;
+    padding: 0 !important;
   }
   .gallery-item {
-    max-width: 140px;
-    height: 120px;
+    width: 60% !important;
   }
 
-
-
-
+  /***Footer***/
 
   .footer-right {
     display: none;
@@ -1341,6 +1555,7 @@ footer {
     width: 40px;
     background-color: #ffffff99;
     border-radius: 100%;
+    margin-bottom: -80px;
   }
 
   #top {
@@ -1355,18 +1570,23 @@ footer {
     flex-direction: column;
     padding: 10%;
     height: 45vh !important;
+    gap:10px !important;
+    align-items: center !important;
+    margin: auto !important;
   }
 
   #about_top h2 {
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font-size: 1.5rem;
   }
 
+
   #about_top span {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.3;
     font-weight: 600;
+    transform: translateY(-180px);
   }
 
   #about_top>#two_2{
@@ -1375,14 +1595,15 @@ footer {
   }
 
   #about_top #two_2 p{
-    font-size: 0.8rem;
+    margin-top: 20px;
+    font-size: 0.75rem;
     line-height: 1.4;
     font-weight: 500;
   }
 
   #about_top #two_2 img{
     margin-top: 25px;
-    width: 40px;
+    width: 35px !important;
   }
 
   #about_bottom {
@@ -1424,6 +1645,11 @@ footer {
     margin:20px 0;
   }
 
+  #about_corner2 p {
+    font-size: 0.8rem;
+    color:#757575;
+  }
+
   #about_right{
     width: initial !important;
     margin-top: 0 !important;
@@ -1440,12 +1666,15 @@ footer {
 
 
   #about_left #about_corner3>div{
-    margin: 0 !important;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
   }
 
   #about_btn1,#about_btn2{
-    width: 160px !important;
+    width: 200px !important;
     height: 40px !important;
     padding: 0px 20px !important;
     text-align: center !important;
@@ -1483,21 +1712,124 @@ footer {
     left: 20px;
   }
 
+  /* #about_last */
+  #about_last {
+    flex-direction: column;
+    height: auto;
+    padding: 50px 15px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  section#feature_list {
+    grid-template-columns: repeat(4, 1fr);
+    overflow-x: auto;
+    gap: 10px;
+  }
+
+  .feature_li {
+    min-width: 75vw; /* 아이템 사이즈 줄이기 */
+    height: auto;
+  }
+
+  .feature_li p{
+    color: #757575;
+  }
+
+  /* #project */
+  #project {
+    padding: 50px 15px;
+    height: auto;
+    flex-direction: column;
+    gap: 30px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  #project_layout {
+    flex-direction: row;
+    width: 300%;
+  }
+
+  #project_layout > div {
+    padding: 0 10px;
+  }
+
+  .project_center .sitename {
+    font-size: 0.9rem;
+  }
+
+  .project_center div {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  #project img{
+    width: 45%;
+  }
+
+  #project p{
+    font-size: 0.8rem;
+  }
+
+  div#project_btn{
+    grid-template-columns: repeat(1, 1fr); /* 세로 정렬되도록 1줄 1칸으로 변경 */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #project_btn button{
+    width:clamp(33vw,44vw,55vw);
+  }
+
+
+  .scroll-down3{
+    width: 110px !important;
+  }
+
 
   /***Work 미디어쿼리 적용 **/
 
+  
+
+  #work-filter {
+    list-style: none;
+    width: 320px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+
+  #work-filter li{
+    border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 70px;
+  }
+
+  #work-filter li a{
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+
   .group1, .group2, .group3 {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 12px;
+    grid-template-columns: 1fr;
+    grid-gap: 6px;
   }
   .gallery-item {
-    max-width: 140px;
-    height: 120px;
+    width: 80vw;
+    height: 20vh;
   }
 
 
 
-
+  /***Work 미디어쿼리 적용 ***/
 
   .footer-right {
     display: none;
