@@ -656,7 +656,6 @@ div.feature_li p{
 }
 
 div#project_btn{
-  border: 1px solid red;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
@@ -791,7 +790,7 @@ div.gallery-item {
   width: 100%;   /* 그리드 셀의 전체를 채움 */
   height: 20vh;
   background-color: #f2f2f2;
-  border: 1px solid red;
+  border: 1px solid #ccc;
   box-sizing: border-box;
 }
 
@@ -1129,7 +1128,6 @@ footer {
   }
 
   #project_btn button{
-    border: 1px solid red;
     width:clamp(33vw,44vw,55vw);
   }
 
@@ -1149,7 +1147,7 @@ footer {
     width: 100%;   /* 그리드 셀의 전체를 채움 */
     height: 20vh;
     background-color: #f2f2f2;
-    border: 1px solid red;
+    border: 1px solid #ccc;
     box-sizing: border-box;
   } 
 
